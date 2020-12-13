@@ -56,7 +56,6 @@ public class Bibliotheque {
 		int r=ChercherBienfaiteur(identifiant);
 		if(r!=-1) {
 			this.arrlistbienfaiteur.remove(r);
-			Bienfaiteur.id--;
 			System.out.println(" Ce bienfaiteur est supprimé avec succés");
 		}
 			else
@@ -201,7 +200,6 @@ public class Bibliotheque {
 		int r=ChercherLivre(identifiant);
 		if(r!=-1) {
 			this.arrlistlivre.remove(r);
-			Livre.id--;
 			System.out.println(" Ce livre est supprimé avec succés");
 		}
 			else
@@ -225,7 +223,7 @@ public class Bibliotheque {
 		if(!this.arrlistlivre.isEmpty()) {
 		for(int i=0;i<this.arrlistlivre.size();i++) 
 		System.out.println(" Tite : "+arrlistlivre.get(i).getTitre()+ ", Edition : "+arrlistlivre.get(i).getEdition()+", Date Edition : "+arrlistlivre.get(i).getDate_edition());
-	System.out.println("Le nombre des livres disponibles est : "+Livre.id);
+	System.out.println("Le nombre des livres disponibles est : "+arrlistlivre.size());
 		}
 		else System.out.println(" La liste des livres est vide "); 
 	}
@@ -369,7 +367,7 @@ public class Bibliotheque {
 		        	type="normal";
 		        }
 		System.out.println(" Nom : "+this.arrlistlecteur.get(i).getNom()+" Prenom : "+arrlistlecteur.get(i).getPrenom()+ ", Numéro de téléphone : "+arrlistlecteur.get(i).getNum_tel()+", Mail : "+arrlistlecteur.get(i).getMail()+", type : "+type);
-	System.out.println("Le nombre des lecteurs disponibles est : "+Lecteur.id);
+	System.out.println("Le nombre des lecteurs disponibles est : "+this.arrlistlecteur.size());
 	System.out.println("Le nombre des lecteurs fidèles est : "+cf);
 		}
 		
